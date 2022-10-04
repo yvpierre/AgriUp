@@ -8,10 +8,11 @@
   z-index: 999999;
 
   .nav-active--logo{
-    margin-top: 5px;
+    margin: 5px 0 0 10px;
     font-size: 28px;
     display: flex;
     align-items: center;
+    color: white;
 
     &::before {
       content: url("../../../../agriup/src/assets/img/rsz_logo.png");

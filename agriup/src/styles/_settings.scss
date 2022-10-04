@@ -22,14 +22,13 @@ $white: rgb(243, 243, 243);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: $white;
   text-decoration: None;
 }
 
 body {
-  background: $color-3;
   font-family: $font-1;
-  // @include verticalCenter;
+  background-color: #fafaf0;
+  color: black;
 }
 
 li {

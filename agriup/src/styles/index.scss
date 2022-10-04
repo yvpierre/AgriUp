@@ -2,6 +2,72 @@
 @import "./components/navigation";
 @import "./components/logo";
 
+.body {
+  margin: 25px 10% ;
+}
+
+.body--pres {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  line-height: 1.5;
+  font-family: "Times New Roman";
+  font-size: 18px;
+
+  .body--presText {
+    width: 50%;
+    padding: 10px 20px;
+  }
+
+  .body--presRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    max-width: 50%;
+    padding: 10px 20px;
+
+
+    .body--presText2 {
+      padding-bottom: 30px;
+    }
+
+
+    .body--presImg {
+      background: url("../assets/img/plants.jpeg");
+      background-size: contain;
+      width: 100%;
+      height: 150px;
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      border-radius: 2px;
+      padding-top: 50px;
+    }
+
+    .body--presBtn{
+      background: black;
+      color: white;
+      height: 60px;
+      position: absolute;
+      top: 105%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #2f3238;
+      }
+
+    }
+
+  }
+
+}
 
 .heroBanner {
   padding-top: 60px;
@@ -14,9 +80,9 @@
   box-shadow:inset 0 0 0 2000px rgba(24, 23, 24, 0.4);
 
   h1 {
+    color: white;
     font-size: 64px;
     width: 400px;
     margin: 50px 0 0 100px;
   }
-
 }
