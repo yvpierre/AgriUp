@@ -1,15 +1,14 @@
 import React from 'react';
-import Logo from '../composants/Logo';
 import Navigation from '../composants/Navigation';
+import Form from '../composants/Form';
 
 const About = () => {
     return (
         <div>
             <Navigation />
-            <Logo />
-
-            <div className="aboutTV">
-                <h1>fooor</h1>
+            <Form />
+            <div className="forms">
+                <h1>A aaaa</h1>
                 <br />
                 <p>oai.</p>
             </div>
