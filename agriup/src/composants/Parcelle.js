@@ -69,7 +69,7 @@ const Parcelle = () => {
                     </label>
                     <div id="area">
                         <input type="number"
-                            placeholder="Entrez la superficie" />
+                            placeholder="Entrez la consommation" />
                         <p id="unite">m³</p></div>
                 </div>
             </div>

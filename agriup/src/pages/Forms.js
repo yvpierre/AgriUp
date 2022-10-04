@@ -7,11 +7,6 @@ const About = () => {
         <div>
             <Navigation />
             <Form />
-            <div className="forms">
-                <h1>A aaaa</h1>
-                <br />
-                <p>oai.</p>
-            </div>
         </div>
     );
 };
