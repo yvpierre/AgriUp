@@ -1,6 +1,9 @@
 import React from 'react';
 import Logo from '../composants/Logo';
 import Navigation from '../composants/Navigation';
+import ArticleCard from "../composants/ArticleCard";
+import Articles from "../composants/Articles";
+import Footer from "../composants/Footer";
 
 const Home = () => {
     return (
@@ -25,20 +28,25 @@ const Home = () => {
                 </div>
             </div>
             <div className={"stats"}>
+                <div className={"stat stats--3"}>
+                    <div className={"stats--3--chiffre stat--head"}>70%</div>
+                    <div className={"stats--3--text"}>De la consommation d'eau mondiale est dédiée à l'agriculture</div>
+                </div>
                 <div className={"stat stats--1"}>
                     <div className={"stats--1--chiffre stat--head"}>302</div>
-                    <div className={"stats--1--text"}>Litres d'eau économisés par kilo</div>
+                    <div className={"stats--1--text"}>Litres d'eau par kilo économisés grâce à AgriUp</div>
                 </div>
                 <div className={"stat stats--2"}>
                     <div className={"stats--2--chiffre stat--head"}>25%</div>
-                    <div className={"stats--2--text"}>de dépenses en moins</div>
-                </div>
-                <div className={"stat stats--3"}>
-                    <div className={"stats--3--chiffre stat--head"}>79</div>
-                    <div className={"stats--3--text"}>Agriculteurs ont rejoint l'aventure</div>
+                    <div className={"stats--2--text"}>de dépenses en eau en moins pour les agriculteurs partenaires</div>
                 </div>
             </div>
+            <Articles />
+
+            <Footer/>
+
         </div>
+
     );
 };
 
