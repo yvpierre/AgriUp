@@ -8,9 +8,8 @@ const Home = () => {
     return (
         <div>
             <Navigation />
-            <Logo />
             <div className={"heroBanner"}>
-                <h1>Économisez votre eau.<br />Optimisez votre exploitation</h1>
+                <h1>Économisez votre eau.<br />Optimisez votre exploitation.</h1>
             </div>
             <div className={"body"}>
                 <div className={"body--pres"}>
@@ -20,7 +19,7 @@ const Home = () => {
                     <div className={"body--presRight"}>
                         <div className={"body--presText2"}>C’est pour cela que nous proposons une solution afin d’accompagner les agriculteurs. Sous la forme d’un simulateur, l’agriculteur peut rentrer toutes les données nécessaires pour connaitre la consommation d’eau optimal dont il a besoin pour sa production.</div>
                         <div className={"body--presImg"}>
-                            <div className={"body--presBtn"}>Bouton</div>
+                            <div className={"body--presBtn"}>Simulez vos besoins</div>
                         </div>
                     </div>
                 </div>

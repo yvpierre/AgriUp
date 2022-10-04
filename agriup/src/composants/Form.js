@@ -20,7 +20,7 @@ const Form = () => {
                     placeholder="Enrez votre email" />
             </div>
             <button type="submit" value="submit" id="submit" disabled="">
-                Submit
+                Consulter mes résultats
             </button>
         </form>
 
