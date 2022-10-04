@@ -1,7 +1,9 @@
 .navigation {
+  background-color: $color-4;
+
   ul {
     display: flex;
-    margin: 30px;
+    margin: 10%;
 
     a {
       text-decoration: none;

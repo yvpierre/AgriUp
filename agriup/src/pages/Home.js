@@ -5,8 +5,9 @@ import Navigation from '../composants/Navigation';
 const Home = () => {
     return (
         <div>
-            <Logo />
             <Navigation />
+            <Logo />
+
         </div>
     );
 };

@@ -5,8 +5,9 @@ import Navigation from '../composants/Navigation';
 const About = () => {
     return (
         <div>
-            <Logo />
             <Navigation />
+            <Logo />
+
             <div className="aboutTV">
                 <h1>A Propos</h1>
                 <br />
