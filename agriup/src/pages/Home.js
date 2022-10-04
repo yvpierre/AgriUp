@@ -7,7 +7,9 @@ const Home = () => {
         <div>
             <Navigation />
             <Logo />
-
+            <div className={"heroBanner"}>
+                <h1>Économisez votre eau.<br/>Optimisez votre exploitation</h1>
+            </div>
         </div>
     );
 };
