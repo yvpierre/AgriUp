@@ -27,9 +27,9 @@ $white: rgb(243, 243, 243);
 }
 
 body {
-  background: $color-3;
   font-family: $font-1;
-  // @include verticalCenter;
+  background-color: #fcfcf7;
+  color: #252117;
 }
 
 li {
