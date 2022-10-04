@@ -45,9 +45,13 @@ const Parcelle = () => {
                     </label>
                     <select name="ground" id="ground">
                         <option value="null">Séléctionner</option>
-                        <option value="sand">Sols sableux</option>
-                        <option value="silt">Sols limoneux</option>
-                        <option value="clay">Sols argileux</option>
+                        <option value="0.7">Sols sableux</option>
+                        <option value="1.8">Sols limoneux</option>
+                        <option value="1.85">Sols argileux</option>
+                        <option value="1.65">Sols argileux-sableux</option>
+                        <option value="1.95">Sols argileux-limoneux</option>
+                        <option value="1.25">Sols sableux-limoneux</option>
+                        <option value="1.70">Sols argileux-sableux-limoneux</option>
                     </select>
                 </div>
                 <div class="form-control">

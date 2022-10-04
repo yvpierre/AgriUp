@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../composants/Navigation';
+import Footer from '../composants/Footer';
 
 const Notfound = () => {
     return (
@@ -7,6 +8,7 @@ const Notfound = () => {
             <Navigation />
             <br /><br />
             <h1>Désolé</h1>
+            <Footer />
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../composants/Navigation';
+import Footer from '../composants/Footer';
 
 const About = () => {
     return (
@@ -7,10 +8,11 @@ const About = () => {
             <Navigation />
 
             <div className="aboutTV">
-                <h1>fooor</h1>
+                <h1>Notre projet</h1>
                 <br />
                 <p>oai.</p>
             </div>
+            <Footer />
         </div>
     );
 };
