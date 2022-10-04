@@ -9,6 +9,7 @@ const Home = () => {
             <Logo />
             <div className={"heroBanner"}>
                 <h1>Économisez votre eau.<br/>Optimisez votre exploitation</h1>
+
             </div>
             <div className={"body"}>
                 <div className={"body--pres"}>
@@ -21,6 +22,20 @@ const Home = () => {
                             <div className={"body--presBtn"}>Bouton</div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className={"stats"}>
+                <div className={"stat stats--1"}>
+                    <div className={"stats--1--chiffre stat--head"}>302</div>
+                    <div className={"stats--1--text"}>Litres d'eau économisés par kilo</div>
+                </div>
+                <div className={"stat stats--2"}>
+                    <div className={"stats--2--chiffre stat--head"}>25%</div>
+                    <div className={"stats--2--text"}>de dépenses en moins</div>
+                </div>
+                <div className={"stat stats--3"}>
+                    <div className={"stats--3--chiffre stat--head"}>79</div>
+                    <div className={"stats--3--text"}>Agriculteurs ont rejoint l'aventure</div>
                 </div>
             </div>
         </div>

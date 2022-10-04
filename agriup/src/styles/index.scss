@@ -3,7 +3,8 @@
 @import "./components/logo";
 
 .body {
-  margin: 25px 10% ;
+  margin: 50px 10% 100px 15% ;
+  padding-bottom: 100px;
 }
 
 .body--pres {
@@ -63,6 +64,11 @@
         background-color: #2f3238;
       }
 
+      &:focus, &:active {
+        background-color: #3F434B;
+
+      }
+
     }
 
   }
@@ -84,5 +90,32 @@
     font-size: 64px;
     width: 400px;
     margin: 50px 0 0 100px;
+  }
+}
+
+.stats {
+  width: 100vw;
+  background: url("../../src/assets/img/bannerStats.jpeg");
+  background-size: cover;
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 200px;
+
+  .stat {
+    color: white;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 24px;
+    text-align: center;
+
+    .stat--head {
+      font-size: 80px !important;
+    }
+
   }
 }
