@@ -9,7 +9,7 @@ const About = () => {
             <Logo />
 
             <div className="aboutTV">
-                <h1>A Propos</h1>
+                <h1>A test</h1>
                 <br />
                 <p>oai.</p>
             </div>
