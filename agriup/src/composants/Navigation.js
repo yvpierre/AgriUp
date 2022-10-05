@@ -9,7 +9,7 @@ const Navigation = () => {
                 <div className={'header--right'}>
                     <NavLink to="/forms" className={(nav) => (nav.isActive ? "nav-active" : "")}> <li>Simulation</li></NavLink>
                     <NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")}> <li>Articles</li></NavLink>
-                    <NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")}> <li>L'équipe</li></NavLink>
+                    <NavLink to="/team" className={(nav) => (nav.isActive ? "nav-active" : "")}> <li>L'équipe</li></NavLink>
                     <NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")}> <li>Mentions légales</li></NavLink>
                 </div>
             </ul>

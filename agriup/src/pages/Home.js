@@ -30,8 +30,8 @@ const Home = () => {
                     <div className={"stats--3--text"}>De la consommation d'eau mondiale est dédiée à l'agriculture</div>
                 </div>
                 <div className={"stat stats--1"}>
-                    <div className={"stats--1--chiffre stat--head"}>302</div>
-                    <div className={"stats--1--text"}>Litres d'eau par kilo économisés grâce à AgriUp</div>
+                    <div className={"stats--1--chiffre stat--head"}>172</div>
+                    <div className={"stats--1--text"}>Litres d'eau par kilo économisés en moyenne grâce à AgriUp</div>
                 </div>
                 <div className={"stat stats--2"}>
                     <div className={"stats--2--chiffre stat--head"}>25%</div>
