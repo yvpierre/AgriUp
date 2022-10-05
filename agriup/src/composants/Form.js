@@ -10,11 +10,11 @@ const Form = () => {
             <button id="new" value="submit" disabled="">
                 Nouvelle parcelle
             </button>
-            <div class="form-control" id="email-control">
+            <div className="form-control" id="email-control">
                 <label for="email" id="label-email">
                     Email
                 </label>
-                <p class="optionnel">Si vous souhaitez recevoir les résultats par mail</p>
+                <p className="optionnel">Si vous souhaitez recevoir les résultats par mail</p>
                 <input type="email"
                     id="email"
                     placeholder="Enrez votre email" />

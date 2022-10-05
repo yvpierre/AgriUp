@@ -1,19 +1,17 @@
-
-
 .card {
   width: 250px;
   height: 350px;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   filter: drop-shadow(-5px 0px 10px rgba(0, 0, 0, 0.2));
   background-color: white;
   border: 1px solid lightgray;
   border-radius: 10px;
   padding-bottom: 40px;
+  transition: 0.3s;
 
   &:hover {
     filter: drop-shadow(-5px 0px 15px rgba(0, 0, 0, 0.4));
   }
-
 }
 
 .card--picture {
@@ -50,7 +48,5 @@
       cursor: pointer;
       background-color: #3b372d;
     }
-
   }
-
 }

@@ -1,10 +1,15 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+<<<<<<< Updated upstream
 import Notfound from './pages/Notfound';
 import Forms from './pages/Forms';
 import Team from "./pages/Team";
+=======
+import Notfound from "./pages/Notfound";
+import Forms from "./pages/Forms";
+>>>>>>> Stashed changes
 
 const App = () => {
   return (
