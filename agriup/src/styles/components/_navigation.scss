@@ -7,7 +7,13 @@
   height: 60px;
   z-index: 999999;
 
-  .nav-active--logo{
+  img {
+    width: 40px;
+    height: 40px;
+    filter: contrast(0);
+  }
+
+  .nav-active--logo {
     margin: 5px 0 0 10px;
     font-size: 28px;
     display: flex;

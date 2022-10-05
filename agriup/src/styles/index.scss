@@ -7,6 +7,8 @@
 @import "./components/articleCard";
 @import "./components/articles";
 @import "./components/footer";
+@import "./components/prices";
+@import "./components/ancre";
 
 
 .body {
@@ -146,7 +148,7 @@
   min-width: 300px;
   width: 500px;
   height: 300px;
-  border-radius: 5px ;
+  border-radius: 5px;
   background-color: lightgray;
 }
 
@@ -170,13 +172,17 @@
 }
 
 .hero--left {
-  q,p {
+
+  q,
+  p {
     padding-left: 20px;
   }
+
   q {
     padding-bottom: 15px;
     font-size: 18px;
   }
+
   p {
     font-size: 20px;
   }
@@ -205,6 +211,7 @@
     0% {
       transform: translateY(0);
     }
+
     100% {
       transform: translateY(-10px);
     }
@@ -221,7 +228,8 @@
     font-weight: 600;
   }
 
-  .member--age, .member--job {
+  .member--age,
+  .member--job {
     font-family: 'Barlow', sans-serif;
   }
 

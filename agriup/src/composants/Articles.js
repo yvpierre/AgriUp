@@ -1,15 +1,20 @@
 import React from 'react';
-import ArticleCard from "./ArticleCard";
 
 const Articles = props => {
-    const animals = ["Dog", "Bird", "Cat", "Horse"];
+    const titres = ["Une meilleure production de maïs grâce aux nouvelles technologies.", "Une nouvelle maladie fauche les champs de blé.", "Un agriculteur touche le gros lot en labourant son champ !", "Nos astuces pour les terreins en pente."];
 
     return (
         <div>
             <div className={"articlesTitle"}>Découvrez nos derniers articles</div>
             <div className={"articles"}>
-                {animals.map(animal => (
-                    <ArticleCard>{animal}</ArticleCard>
+                {titres.map(titre => (
+                    <div className="card">
+                        <div className={"card--picture"}></div>
+                        <div className={"card--body"}>
+                            <div className={"card--title"}>{titre}</div>
+                            <div className={"card--btn"}>Découvrir</div>
+                        </div>
+                    </div>
                 ))}
             </div>
         </div>
