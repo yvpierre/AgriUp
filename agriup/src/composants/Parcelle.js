@@ -33,8 +33,10 @@ const Parcelle = () => {
                     </label>
                     <select name="plant" id="plant">
                         <option value="null">Séléctionner</option>
-                        <option value="but">Maïs</option>
-                        <option value="vine">Vignes</option>
+                        <option value="Le maïs">Le maïs</option>
+                        <option value="Le soja">Le soja</option>
+                        <option value="Le blé">Le blé</option>
+                        <option value="Les vignes">Les vignes</option>
                     </select>
                 </div>
                 <div class="form-control">
@@ -44,13 +46,13 @@ const Parcelle = () => {
                     </label>
                     <select name="ground" id="ground">
                         <option value="null">Séléctionner</option>
-                        <option value="0.7">Sols sableux</option>
-                        <option value="1.8">Sols limoneux</option>
-                        <option value="1.85">Sols argileux</option>
-                        <option value="1.65">Sols argileux-sableux</option>
-                        <option value="1.95">Sols argileux-limoneux</option>
-                        <option value="1.25">Sols sableux-limoneux</option>
-                        <option value="1.70">Sols argileux-sableux-limoneux</option>
+                        <option value="1.85">Argiles</option>
+                        <option value="1.80">Limons</option>
+                        <option value="0.70">Sables</option>
+                        <option value="1.65">Argiles - sableuses</option>
+                        <option value="1.95">Argiles - limoneux</option>
+                        <option value="1.25">Limons - sableux</option>
+                        <option value="1.70">Argiles - sablo - limoneux</option>
                     </select>
                 </div>
                 <div class="form-control">

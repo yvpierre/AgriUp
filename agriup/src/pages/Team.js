@@ -6,15 +6,15 @@ const Team = () => {
     const boxRef = useRef();
 
     const team = [
-        {nom: "Raphaël Bailhet", age:"20", job:"Dév", urlPic: require("../assets/img/team/default.jpeg")},
-        {nom: "Begum Cetin", age:"20", job:"Dév", urlPic: require("../assets/img/team/begum.jpeg")},
-        {nom: "Tudor Coman", age:"20", job:"Dév", urlPic: require("../assets/img/team/tudor.jpeg")},
-        {nom: "Abdel Maha", age:"20", job:"Dév", urlPic: require("../assets/img/team/default.jpeg")},
-        {nom: "Zainab Lahmar", age: "20", job: "Dév", urlPic: require("../assets/img/team/zainab.jpeg")},
-        {nom: "Melwyne Mouroux", age: "20", job: "Dév", urlPic: require("../assets/img/team/melwyne.jpeg")},
-        {nom: "Yanis Periand", age: "20", job: "Dév", urlPic: require("../assets/img/team/yanis.jpeg")},
-        {nom: "Sangmin Shim", age: "20", job: "Dév", urlPic: require("../assets/img/team/sangmin.jpeg")},
-        {nom: "Pierre Yvenou", age: "20", job: "Développeur React", urlPic: require("../assets/img/team/pierre.jpeg")},
+        {nom: "Raphaël Bailhet", age:"20", job:"Développeur", urlPic: require("../assets/img/team/default.jpeg")},
+        {nom: "Begum Cetin", age:"21", job:"Dév", urlPic: require("../assets/img/team/begum.jpeg")},
+        {nom: "Tudor Coman", age:"20", job:"SysOps", urlPic: require("../assets/img/team/tudor.jpeg")},
+        {nom: "Abdel Maha", age:"24", job:"Dév", urlPic: require("../assets/img/team/default.jpeg")},
+        {nom: "Zainab Lahmar", age: "25", job: "Dév", urlPic: require("../assets/img/team/zainab.jpeg")},
+        {nom: "Melwyne Mouroux", age: "22", job: "Dév", urlPic: require("../assets/img/team/melwyne.jpeg")},
+        {nom: "Yanis Periand", age: "19", job: "SysOps", urlPic: require("../assets/img/team/yanis.jpeg")},
+        {nom: "Sangmin Shim", age: "29", job: "Dév", urlPic: require("../assets/img/team/sangmin.jpeg")},
+        {nom: "Pierre Yvenou", age: "19", job: "Développeur React", urlPic: require("../assets/img/team/pierre.jpeg")},
     ];
 
     return (

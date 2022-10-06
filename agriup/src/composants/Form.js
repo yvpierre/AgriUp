@@ -2,10 +2,10 @@ import React from 'react';
 import Parcelle from '../composants/Parcelle';
 
 const Form = () => {
+
     return (
 
         <form id="form">
-            <Parcelle />
             <Parcelle />
             <button id="new" value="submit" disabled="">
                 Nouvelle parcelle
