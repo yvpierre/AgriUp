@@ -31,9 +31,29 @@ const Form = () => {
     );
 };
 
+
+const getUserResponse = () => {
+
+    let res = []
+    // Taille parcelle
+    res.push($('.form--parcelleTaille').val())
+    // Location parcelle
+    res.push($('#region option:selected').val())
+    // Type plantation
+    res.push($('#plant option:selected').val())
+    // Type soil
+    res.push($('#ground option:selected').val())
+    // Type climate
+    res.push($('#climat option:selected').val())
+    // Conso soil
+    res.push($('.form--conso').val())
+
+    return res
+}
+
 $(document).on("click", ".form--btnSubmit", function() {
-    console.log("trsfffd")
-    window.open("result", "_self")
+    console.log(getUserResponse());
+    // window.open("result", "_self")
 })
 
 

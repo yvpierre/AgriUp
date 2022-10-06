@@ -5,25 +5,47 @@ const ListParcelles = () => {
 
     const [count, setList] = useState(0)
 
+    const counter = "test";
+
     const getParcelles = () => {
         let res = []
         for(let j=0; j<count; j++) {
             res.push(toString(j))
-            console.log(j)
         }
         return res;
     }
 
+   /* const removePeople = (event) => {
+        let array = [...this.state.people]; // make a separate copy of the array
+        let index = array.indexOf(e.target.value)
+        if (index !== -1) {
+            array.splice(index, 1);
+            this.setState({people: array});
+        }
+    }*/
+
+    const supprParcelle = (id) => {
+        let res = []
+        for(let i=0; i<count; i++) {
+            if(i !== id){
+                res.push(toString(i))
+            }
+        }
+
+        return res;
+    }
+
+
     return (
         <div>
-            {getParcelles().map(i => (
-                <Parcelle />
+            {getParcelles().map((elem, i) => (
+                <Parcelle id= {i}/>
             ))}
 
+            <button onClick={() => setList(count - 1)}>Supprimer item</button>
             <button className={"form--btnParcelles"} type={"button"} onClick={() => setList(count + 1)}>
                 Nouvelle parcelle
             </button>
-            <div>Nombre de clics {count}</div>
         </div>
     );
 };

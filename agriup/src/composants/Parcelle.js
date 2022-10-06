@@ -1,37 +1,39 @@
 import React from 'react';
 
-const Parcelle = (index) => {
+const Parcelle = (id) => {
 
+console.log(id.id)
 
     return (
         <div className="parcelle">
             <div id="controls">
-                <div></div>
+                <h1>Parcelle n°{id.id + 1}</h1>
                 <hr />
                 <br />
                 <div class="form-control">
                     <label for="name" id="label-name">
                         Taille de la parcelle
-                        <p class="required">* nécessaire</p>
+                        <small class="required">&nbsp;*</small>
                     </label>
                     <div id="area">
-                        <input type="number" placeholder="Entrez la superficie" />
+                        <input className={"form--parcelleTaille"} type="number"
+                            placeholder="Entrez la superficie" />
                         <p id="unite">m²</p></div>
                 </div>
                 <div class="form-control">
                     <label for="region" id="label-region">
                         Où se trouve cette parcelle ?
-                        <p class="required">* </p>
+                        <small className="required">&nbsp;*</small>
                     </label>
                     <select name="region" id="region">
                         <option value="null">Séléctionner</option>
-                        <option value="but">Nouvelle-Aquitaine</option>
+                        <option value="Nouvelle-Aquitaine">Nouvelle-Aquitaine</option>
                     </select>
                 </div>
                 <div class="form-control">
                     <label for="plant" id="label-plant">
                         Que cultivez-vous sur cette parcelle ?
-                        <p class="required">* </p>
+                        <small className="required">&nbsp;*</small>
                     </label>
                     <select name="plant" id="plant">
                         <option value="null">Séléctionner</option>
@@ -44,7 +46,7 @@ const Parcelle = (index) => {
                 <div class="form-control">
                     <label for="ground" id="label-ground">
                         Quel type de sols composent votre parcelle ?
-                        <p class="required">* </p>
+                        <small className="required">&nbsp;*</small>
                     </label>
                     <select name="ground" id="ground">
                         <option value="null">Séléctionner</option>
@@ -60,7 +62,7 @@ const Parcelle = (index) => {
                 <div class="form-control">
                     <label for="climat" id="label-climat">
                         Quel climat correspond le plus à celui de votre parcelle ?
-                        <p class="required">* </p>
+                        <small className="required">&nbsp;*</small>
                     </label>
                     <select name="climat" id="climat">
                         <option value="null">Séléctionner</option>
@@ -73,12 +75,14 @@ const Parcelle = (index) => {
                 <div class="form-control">
                     <label for="name" id="label-name">
                         Combien consommez-vous actuellement ?
+                        <small className="required">&nbsp;*</small>
                     </label>
                     <div id="area">
-                        <input type="number"
+                        <input type="number" className={"form--conso"}
                             placeholder="Entrez la consommation" />
                         <p id="unite">m³</p></div>
                 </div>
+
             </div>
             <div id="delControl">
                 <button class="delete-control"> <img src={require("./../assets/img/close.png")} alt="delete_button" /> </button>
