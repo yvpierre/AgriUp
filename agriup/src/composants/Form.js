@@ -1,10 +1,9 @@
 import React from 'react';
 import Parcelle from '../composants/Parcelle';
+import $ from "jquery";
 
 const Form = () => {
-
     return (
-
         <form id="form">
             <Parcelle />
             <button id="new" value="submit" disabled="">
@@ -19,12 +18,13 @@ const Form = () => {
                     id="email"
                     placeholder="Enrez votre email" />
             </div>
-            <button type="submit" value="submit" id="submit" disabled="">
+            <div className={"btnSubmit"}>
                 Consulter mes résultats
-            </button>
+            </div>
         </form>
 
     );
 };
+
 
 export default Form;

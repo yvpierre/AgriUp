@@ -16,7 +16,7 @@ const App = () => {
         <Route path="/notfound" element={<Notfound />} />
         <Route path="/team" element={<Team />} />
         <Route path="/forms" element={<Forms />} />
-        <Route path="/results" element={<Result />}/>
+        <Route path="/result" element={<Result />}/>
         {/* path = * fonctionne si l'url ne correspond a rien de connu */}
         <Route path="*" element={<Home />} />
       </Routes>

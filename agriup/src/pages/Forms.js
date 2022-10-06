@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../composants/Navigation';
 import Form from '../composants/Form';
 import Footer from '../composants/Footer';
+import $ from "jquery";
 
 const About = () => {
     return (
@@ -12,5 +13,10 @@ const About = () => {
         </div>
     );
 };
+
+$('.btnSubmit').click(function(event) {
+    console.log("trsd")
+    window.open("result", "_self")
+})
 
 export default About;
