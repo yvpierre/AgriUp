@@ -5,6 +5,8 @@ import About from "./pages/About";
 import Notfound from './pages/Notfound';
 import Forms from './pages/Forms';
 import Team from "./pages/Team";
+import Pricing from './pages/Pricing';
+import Account from './pages/Account';
 import Result from "./pages/Result";
 
 const App = () => {
@@ -16,7 +18,9 @@ const App = () => {
         <Route path="/notfound" element={<Notfound />} />
         <Route path="/team" element={<Team />} />
         <Route path="/forms" element={<Forms />} />
-        <Route path="/result" element={<Result />}/>
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/result" element={<Result />} />
         {/* path = * fonctionne si l'url ne correspond a rien de connu */}
         <Route path="*" element={<Home />} />
       </Routes>
