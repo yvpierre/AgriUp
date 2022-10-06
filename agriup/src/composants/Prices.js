@@ -33,7 +33,7 @@ const Prices = () => {
                         <div class="price-header">
                             <div class="icon"><i class="fa fa-rocket"></i></div>
                             <h3 class="title">Soft-Power</h3>
-                            <div class="price"><span class="dollar">€</span>50<span class="month">/Mo</span></div>
+                            <div class="price"><span class="dollar">€</span>50<span class="month">/Mois</span></div>
                         </div>
 
                         <div class="price-body">
