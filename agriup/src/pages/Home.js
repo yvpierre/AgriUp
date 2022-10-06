@@ -1,6 +1,5 @@
 import React from 'react';
 import Navigation from '../composants/Navigation';
-import ArticleCard from "../composants/ArticleCard";
 import Articles from "../composants/Articles";
 import Footer from "../composants/Footer";
 
