@@ -7,6 +7,7 @@ const Form = () => {
 
         <form id="form">
             <Parcelle />
+            <img id="okyanis" src={require("./../assets/img/fondForm.jpg")} alt="okyanis" />
             <button id="new" value="submit" disabled="">
                 Nouvelle parcelle
             </button>
