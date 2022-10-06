@@ -7,7 +7,6 @@ const Form = () => {
 
         <form id="form">
             <Parcelle />
-            <Parcelle />
             <button id="new" value="submit" disabled="">
                 Nouvelle parcelle
             </button>

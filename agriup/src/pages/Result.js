@@ -69,10 +69,12 @@ const Result = () => {
                 <li>
                     <h2>Specific data (e.g : data [3,4])</h2>
                     {getData(3, 4, TableBasedPlants)}
+
                     <h2>Specific line (e.g : line 3)</h2>
                     {getLine(3, TableBasedPlants).map(elem => (
                         <p>{elem}</p>
                     ))}
+
                     <h2>Specific column (e.g : col 2)</h2>
                     {getColumn(2, TableBasedPlants).map(elem => (
                         <p>{elem}</p>
