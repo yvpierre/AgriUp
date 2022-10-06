@@ -1,12 +1,23 @@
 #formCalc {
+    background-color: white;
     width: 900px;
-    margin: 50px auto;
+    margin: 100px auto;
     max-width: 600px;
     padding: 30px 20px;
+    border-radius: 20px;
 
     btn {
         color: white;
     }
+}
+
+#okyanis {
+    background: url("../../assets/img/fondForm.jpg");
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -999;
 }
 
 .form--btnSubmit {
@@ -29,29 +40,46 @@
         color: white;
         cursor: pointer;
     }
-}
-
-
-#email-control {
-    margin-top: 50px;
-}
-
-.form--btnParcelles {
-    color: white;
-    display: block;
-    background-color: #05c46b;
-    justify-content: center;
-    font-family: inherit;
-    font-size: 21px;
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
-
-    &:hover {
+    #submit:hover {
+        transition: transform .5s;
         background-color: #6cc99d;
         color: white;
-        cursor: pointer;
-    }}
+    }
+
+    #email-control {
+        margin-top: 50px;
+    }
+
+    .form--btnParcelles {
+        color: white;
+        display: block;
+        background-color: #05c46b;
+        justify-content: center;
+        font-family: inherit;
+        font-size: 21px;
+        width: 50%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+
+        &:hover {
+            background-color: #6cc99d;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.footer--fix {
+    border: 1px solid transparent;
+    height: 100vh;
+}
+
+.footer--spe {
+    position: static;
+    margin-top: 50vh;
+    bottom: 0;
+    z-index: -500;
+}

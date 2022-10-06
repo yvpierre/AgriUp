@@ -53,7 +53,6 @@ const Prices = () => {
                     </div>
                 </div>
             </div>
-            <Co />
         </div>
     );
 };

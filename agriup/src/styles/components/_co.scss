@@ -13,16 +13,13 @@ $grey: #297a3d;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    margin: auto;
     margin-top: 100px;
-    margin-bottom: 14%;
     width: 500px;
     height: 400px;
     background: white;
     position: relative;
-    display: grid;
-    grid-template: 100%;
     box-shadow: 2px 2px 10px 0 rgba(#333, 0.2);
+    margin-bottom: 22%;
 }
 
 .message {

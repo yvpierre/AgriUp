@@ -42,7 +42,7 @@ const ListParcelles = () => {
                 <Parcelle id= {i}/>
             ))}
 
-            <button className={"form--btnParcelles"} type={"button"} onClick={() => setList(count + 1)}>
+            <button className={"form--btnSubmit"} type={"button"} onClick={() => setList(count + 1)}>
                 Nouvelle parcelle
             </button>
         </div>

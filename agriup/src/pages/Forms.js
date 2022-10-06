@@ -7,10 +7,12 @@ import Parcelle from "../composants/Parcelle";
 
 const About = () => {
     return (
-        <div>
+        <div className={"footer--fix"}>
+            <div id="okyanis" alt="okyanis"></div>
             <Navigation />
             <Form />
-            <Footer />
+
+
         </div>
     );
 };

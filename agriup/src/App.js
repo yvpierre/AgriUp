@@ -8,6 +8,7 @@ import Team from "./pages/Team";
 import Pricing from './pages/Pricing';
 import Account from './pages/Account';
 import Result from "./composants/Result";
+import FirstA from './pages/FirstA';
 
 const App = () => {
   return (
@@ -21,6 +22,8 @@ const App = () => {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/account" element={<Account />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/results" element={<Result />} />
+        <Route path="/firstarticle" element={<FirstA />} />
         {/* path = * fonctionne si l'url ne correspond a rien de connu */}
         <Route path="*" element={<Home />} />
       </Routes>

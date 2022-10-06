@@ -4,6 +4,7 @@ import $ from "jquery";
 import ReactDOM from "react-dom";
 import ListParcelles from "./ListParcelles";
 import Result from "./Result";
+import Footer from "./Footer";
 
 const Form = () => {
 
@@ -30,7 +31,6 @@ const Form = () => {
 
     return (
         <div className={"bodyForm"}>
-
             <form id="formCalc">
                 <ListParcelles/>
                 <div className={"listeParcelles"}></div>
@@ -48,11 +48,14 @@ const Form = () => {
                     Consulter mes résultats
                 </div>
             </form>
-
             <Result props={propsRes}/>
 
-        </div>
+            <div className={"footer--spe"}>
+                <Footer />
 
+            </div>
+
+        </div>
     );
 };
 
