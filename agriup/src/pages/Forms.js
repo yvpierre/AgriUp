@@ -3,6 +3,7 @@ import Navigation from '../composants/Navigation';
 import Form from '../composants/Form';
 import Footer from '../composants/Footer';
 import $ from "jquery";
+import Parcelle from "../composants/Parcelle";
 
 const About = () => {
     return (
@@ -14,9 +15,5 @@ const About = () => {
     );
 };
 
-$('.btnSubmit').click(function(event) {
-    console.log("trsd")
-    window.open("result", "_self")
-})
 
 export default About;

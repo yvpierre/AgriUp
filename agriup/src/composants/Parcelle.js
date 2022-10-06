@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Parcelle = () => {
+const Parcelle = (index) => {
+
+
     return (
         <div className="parcelle">
             <div id="controls">
-                <h1>Parcelle n°</h1>
+                <div></div>
                 <hr />
                 <br />
                 <div class="form-control">
