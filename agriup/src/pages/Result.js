@@ -6,38 +6,38 @@ import Footer from "../composants/Footer";
 const Result = () => {
 
     const TableBasedPlants = [
-        ["blé", 5500, 270, 1.50, 0.90, 4.00, 0, ""],
-        ["betterave sucrière", 6500, 60, 0.35, 0.80, 4.00, 0, ""],
-        ["tournesol", 1000, 130, 2.00, 0.60, 4.00, 2800, ""],
-        ["soja", 6370, 130, 1.00, 0.70, 4.00, 0, ""],
-        ["mais", 4000, 180, 0.45, 0.80, 4.00, 8100, ""],
-        ["sorgho", 4750, 130, 1.00, 0.85, 4.00, 13330, ""],
-        ["vignes", 5500, 270, 1.50, 0.90, 4.00, 0, "Le sol le plus adapté à la vigne sera pierreux, sablonneux, si possible argilo-calcaire, et bien drainé"],
+        {plantes:"Le blé", racine:1.50, kc:0.90, etref:4.0},
+        {plantes:"La betterave sucrière", racine:0.35, kc:0.80, etref:4.0},
+        {plantes:"Le tournesol", racine:2.00, kc:0.60, etref:4.0},
+        {plantes:"Le soja", racine:1.00, kc:0.80, etref:4.0},
+        {plantes:"Le maïs", racine:0.45, kc:0.80, etref:4.0},
+        {plantes:"Le sorgho", racine:1.00, kc:0.85, etref:4.0},
+        {plantes:"Les Vignes", racine:3.00, kc:0.55, etref:4.0},
     ]
 
     const TableSoilTypes = [
-        ["Argiles", 1.85, "retient de facon efficace l'eau / une terre dure à travailler"],
-        ["Limons", 1.80, "Intermédiaire entre argiles et sables"],
-        ["Sables", 0.70, "Séche facilement donc les apports doivent être fréquents"],
-        ["Argiles - sableuses", 1.65, ""],
-        ["Argiles - limoneux", 1.95, ""],
-        ["Limons - sableux", 1.25, ""],
-        ["Argiles - sablo-limoneux", 1.70, ""]
+        {type_sol:"Argiles", ru:1.85},
+        {type_sol:"Limons",  ru:1.80},
+        {type_sol:"Sables",  ru:0.70},
+        {type_sol:"Argiles - sableuses",  ru:1.65},
+        {type_sol:"Argiles - limoneux",  ru:1.95},
+        {type_sol:"Limons - sableux",  ru:1.25},
+        {type_sol:"Argiles - sablo-limoneux",  ru:1.70}
     ]
 
     const TablePrecipitations = [
-        [1,39.6],
-        [2,48.9],
-        [3,34.4],
-        [4,62.4],
-        [5,19.1],
-        [6,99.8],
-        [7,3.0],
-        [8,26.3],
-        [9,39.4],
-        [10,6.4],
-        [11,38],
-        [12,38]
+        {mois: 1,precipitations:39.6},
+        {mois: 2,precipitations:48.9},
+        {mois: 3,precipitations:34.4},
+        {mois: 4,precipitations:62.4},
+        {mois: 5,precipitations:19.1},
+        {mois: 6,precipitations:99.8},
+        {mois: 7,precipitations:3.0},
+        {mois: 8,precipitations:26.3},
+        {mois: 9,precipitations:39.4},
+        {mois: 10,precipitations:6.4},
+        {mois: 11,precipitations:38},
+        {mois: 12,precipitations:38}
     ]
 
 
@@ -88,15 +88,110 @@ const Result = () => {
         return res;
     }
 
+    // Formulaire
+    // Il faut les supprimer dès que l'on réussit à recevoir les données de formulaire
+    // const enter_plant = "Le maïs"
+    // const enter_land = "Argiles"
+    // const enter_nb_day=150
+    // const enter_surface = 15689
+    // const enter_actual_used_water = 590
 
+    const getPlant = (arrayConst, enter_plant) => {
+        let result = []
+        for (let i in arrayConst){
+                if (arrayConst[i].plantes === enter_plant){
+                    for(let j in arrayConst[i]){
+                        result.push(arrayConst[i][j])
+                    }
+                }
+            
+        }
+        return result
+    }
+
+    // 1. Stockage d'eau 
+    const stockWater = (arrayConst1, arrayConst2, enter_plant, enter_land) => {
+        let result = []
+        let racine = getPlant(arrayConst1, enter_plant)[1]
+
+        result.push(racine)
+
+        for (let i in arrayConst2){
+            if (arrayConst2[i].type_sol === enter_land){
+                for(let j in arrayConst2[i]){
+                    result.push(arrayConst2[i][j])
+                }
+            }
+        
+        }
+        
+        let result_calcul= racine*(2/3)*result[2]*1000
+
+        return result_calcul
+    }
+
+    // 2. Volume de stockage 
+    const volumeStock = (arrayConst1, arrayConst2, enter_plant, enter_land ,enter_surface) => {
+        let stock_water = stockWater(arrayConst1, arrayConst2, enter_plant, enter_land)
+        
+        return stock_water*(enter_surface/10000)*10
+    }
+
+    // 3. Besoin d'eau
+    const needWater = (enter_nb_day, arrayConst, enter_plant) => {
+        let plant = getPlant(arrayConst, enter_plant)
+
+        return enter_nb_day * plant[2] * plant[3]
+
+    }
+
+    // 4. Volumne d'eau nécessaire
+    const volumeNeed= (enter_nb_day, arrayConst, enter_plant, enter_surface) => {
+        let water = needWater(enter_nb_day, arrayConst, enter_plant)
+
+        return water*(enter_surface/10000)*10
+    }
+
+    // 5. Check Irrigation 
+    const checkIrrigationNeeded =(enter_actual_used_water, enter_nb_day, arrayConst, enter_plant, enter_surface) => {
+        let volume = volumeNeed(enter_nb_day, arrayConst, enter_plant, enter_surface)
+
+        let result ="result"
+        if (enter_actual_used_water < volume || enter_actual_used_water === volume){
+            result = "Il faut arroser"
+            return result
+        }
+        else{
+            result = "Vous consommez beaucoup d'eau"
+            return result
+        }
+    }
 
     return (
         <div>
             <Navigation/>
             <div className={"resultBody"}>
-                <h1>Vos résultats</h1>
-                <h2>Specific data (e.g : data [3,4])</h2>
-                {getData(3, 4, TableBasedPlants)}
+                <div>getPlan</div>
+                {getPlant(TableBasedPlants,"Le maïs")[0]}
+                
+                <div>stockWater</div>
+                {stockWater(TableBasedPlants,TableSoilTypes,"Le maïs","Argiles")} mm
+                
+                <div>volumeStock</div>
+                {volumeStock(TableBasedPlants,TableSoilTypes,"Le maïs","Argiles",15689)} m3
+                
+                <div>needWater</div>
+                {needWater(10,TableBasedPlants, "Le maïs")} mm
+
+                <div>volumeNeed</div>
+                {volumeNeed(150, TableBasedPlants, "Le maïs",15689)} m3
+
+                <div>checkIrrigationNeeded</div>
+                {checkIrrigationNeeded(100, 150, TableBasedPlants, "Le maïs",15689)}
+
+                
+
+{/* 
 
                 <h2>Specific line (e.g : line 3)</h2>
                 {getLine(3, TableBasedPlants).map(elem => (
@@ -106,7 +201,7 @@ const Result = () => {
                 <h2>Specific column (e.g : col 2)</h2>
                 {getColumn(2, TableBasedPlants).map(elem => (
                     <p>{elem}</p>
-                ))}
+                ))} */}
             </div>
             <Footer/>
         </div>
