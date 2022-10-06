@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Articles = props => {
-    const titres = ["Une meilleure production de maïs grâce aux nouvelles technologies.", "Une nouvelle maladie fauche les champs de blé.", "Un agriculteur touche le gros lot en labourant son champ !", "Nos astuces pour les terreins en pente."];
+    const titres = ["Une meilleure production de maïs grâce aux nouvelles technologies.", "Une nouvelle maladie fauche les champs de blé.", "Un agriculteur touche le gros lot en labourant son champ !", "Nos astuces pour les terrains en pente."];
 
     return (
         <div>
@@ -12,7 +12,7 @@ const Articles = props => {
                         <div className={"card--picture"}></div>
                         <div className={"card--body"}>
                             <div className={"card--title"}>{titre}</div>
-                            <div className={"card--btn"}>Découvrir</div>
+                            <a href="#"><div className={"card--btn"}>Découvrir</div></a>
                         </div>
                     </div>
                 ))}

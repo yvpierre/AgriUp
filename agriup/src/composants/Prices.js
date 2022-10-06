@@ -1,8 +1,9 @@
 import React from 'react';
+import Co from './Co';
 
 const Prices = () => {
     return (
-        <div>
+        <div class="pvt">
             <h1 class="title ">Nos prix</h1>
             <div class="price-plan-wrapper">
                 <div class="col-lg-4  col-md-6 ">
@@ -52,6 +53,7 @@ const Prices = () => {
                     </div>
                 </div>
             </div>
+            <Co />
         </div>
     );
 };
