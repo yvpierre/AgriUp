@@ -147,7 +147,9 @@
   width: 500px;
   height: 300px;
   border-radius: 5px ;
-  background-color: lightgray;
+  flex: 1;
+  background: url("../assets/img/team/team.jpeg");
+  background-size: cover;
 }
 
 .hero--left {

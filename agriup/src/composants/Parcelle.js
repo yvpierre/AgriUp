@@ -38,7 +38,6 @@ const Parcelle = () => {
                         <option value="Le soja">Le soja</option>
                         <option value="Le blé">Le blé</option>
                         <option value="Les vignes">Les vignes</option>
-                        
                     </select>
                 </div>
                 <div class="form-control">

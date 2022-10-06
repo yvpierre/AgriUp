@@ -10,7 +10,6 @@ const About = () => {
             <div className="aboutTV">
                 <h1>Notre projet</h1>
                 <br />
-                <p>oai.</p>
             </div>
             <Footer />
         </div>
