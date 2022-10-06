@@ -42,7 +42,6 @@ const ListParcelles = () => {
                 <Parcelle id= {i}/>
             ))}
 
-            <button onClick={() => setList(count - 1)}>Supprimer item</button>
             <button className={"form--btnParcelles"} type={"button"} onClick={() => setList(count + 1)}>
                 Nouvelle parcelle
             </button>

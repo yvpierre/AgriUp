@@ -3,33 +3,59 @@ import Parcelle from '../composants/Parcelle';
 import $ from "jquery";
 import ReactDOM from "react-dom";
 import ListParcelles from "./ListParcelles";
+import Result from "./Result";
 
 const Form = () => {
 
+    let propsRes;
+    $(document).on("click", ".form--btnSubmit", function() {
+        console.log(propsRes)
+        propsRes = {
+            enter_surface: $('.form--parcelleTaille').val(),
+            enter_plant: $('#plant option:selected').val(),
+            enter_land: $('#ground option:selected').val(),
+            enter_actual_used_water: $('.form--conso').val()
+        }
+
+        $('.resultBody').css("display", "none") ? $('.resultBody').css("display", "flex") : console.log("display ok")
+
+        $('.fermerResult').on("click", function() {
+            $('.resultBody').css("display", "none")
+        })
+
+
+    })
+
+
+
     return (
-        <form id="formCalc">
-            <ListParcelles/>
-            <div className={"listeParcelles"}>
+        <div className={"bodyForm"}>
 
-            </div>
+            <form id="formCalc">
+                <ListParcelles/>
+                <div className={"listeParcelles"}></div>
 
+                <div className="form-control" id="email-control">
+                    <label htmlFor="email" id="label-email">
+                        Email
+                    </label>
+                    <p className="optionnel">Si vous souhaitez recevoir les résultats par mail</p>
+                    <input type="email"
+                           id="emshowResultail"
+                           placeholder="Enrez votre email"/>
+                </div>
+                <div className={"form--btnSubmit"}>
+                    Consulter mes résultats
+                </div>
+            </form>
 
-            <div class="form-control" id="email-control">
-                <label for="email" id="label-email">
-                    Email
-                </label>
-                <p class="optionnel">Si vous souhaitez recevoir les résultats par mail</p>
-                <input type="email"
-                    id="email"
-                    placeholder="Enrez votre email" />
-            </div>
-            <div className={"form--btnSubmit"}>
-                Consulter mes résultats
-            </div>
-        </form>
+            <Result props={propsRes}/>
+
+        </div>
 
     );
 };
+
 
 
 const getUserResponse = () => {
@@ -51,10 +77,7 @@ const getUserResponse = () => {
     return res
 }
 
-$(document).on("click", ".form--btnSubmit", function() {
-    console.log(getUserResponse());
-    // window.open("result", "_self")
-})
+
 
 
 

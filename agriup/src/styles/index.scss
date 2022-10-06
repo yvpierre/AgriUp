@@ -10,6 +10,7 @@
 @import "./components/prices";
 @import "./components/ancre";
 @import "./components/co";
+@import "./components/result";
 
 
 .body {
@@ -252,11 +253,30 @@
 }
 
 .resultBody {
+  display: none;
+  flex-direction: column;
   margin: 150px 20%;
   background-color: white;
   padding: 20px;
   border-radius: 20px;
   filter: drop-shadow(5px 0px 10px rgba(0, 0, 0, 0.2));
+
+  .fermerResult {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: red;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
   h1 {
     margin-bottom: 20px;
@@ -267,3 +287,4 @@
   }
 
 }
+

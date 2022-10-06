@@ -7,7 +7,7 @@ import Forms from './pages/Forms';
 import Team from "./pages/Team";
 import Pricing from './pages/Pricing';
 import Account from './pages/Account';
-import Result from "./pages/Result";
+import Result from "./composants/Result";
 
 const App = () => {
   return (
